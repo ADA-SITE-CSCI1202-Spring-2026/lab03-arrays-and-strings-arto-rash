@@ -38,4 +38,11 @@ public class StringUtil {
     }
     return sb.toString();
   }
+
+  public static boolean areAnagrams(String a, String b) {
+    String sortedA = sort(a);
+    String sortedB = sort(b);
+
+    return sortedA.equals(sortedB);
+  }
 }
