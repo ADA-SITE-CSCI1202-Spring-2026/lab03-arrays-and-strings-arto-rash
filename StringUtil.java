@@ -9,4 +9,13 @@ public class StringUtil {
     }
     return sb.toString(); // return sb.reverse().toString(); as an alternative
   }
+
+  public static String explode(String s) {
+    StringBuilder sb = new StringBuilder();
+    for (int i=0;i<s.length();i++) {
+      for (int j=0;j<=i;j++) {
+        sb.append(s.charAt(j));
+      }
+    } return sb.toString();
+  }
 }
