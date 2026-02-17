@@ -45,4 +45,18 @@ public class StringUtil {
 
     return sortedA.equals(sortedB);
   }
+
+  public static String mix(String a) {
+    String[] splitted = a.split(" ");
+    String[] res = new String[splitted.length];
+
+    for (int i=0;i<splitted.length;i++) {
+      char[] ch = splitted[i].toCharArray();
+      char tmp = ch[0];
+      ch[0] = ch[splitted[i].length()-1];
+      ch[splitted[i].length()-1] = tmp;
+      res[i] = new String(ch);
+    }
+    return String.join(" ", res);
+  }
 }
