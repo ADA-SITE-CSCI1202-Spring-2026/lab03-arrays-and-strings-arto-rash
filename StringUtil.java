@@ -1,7 +1,5 @@
 package Lab3;
 
-import java.util.Arrays;
-
 public class StringUtil {
 
   public static String reverse(String s) {
